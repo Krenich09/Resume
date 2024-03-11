@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+    \textbf{\Huge \scshape Raid Krenich} \\ \vspace{1pt}
+    \small +1-226-724-6260$|$ \href{mailto:krenichraid@gmail.com}{\underline{krenichraid@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/raid-krenich-239208253/}{\underline{Linkedin}} $|$
+    \href{https://github.com/Krenich09}{\underline{Github}} $|$
+    \href{https://rq1d.itch.io/}{\underline{Itch.io}}
+\end{center}
+
+%
+%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%  \textbf{\href{http://sourabhbajaj.com/}{\Large Raid Krenich}} & Email : \href{mailto:krenichraid@gmail.com}{krenichraid@gmail.com}\\
+%  \href{}{} & Mobile : +1-226-724-6260 \\
+%\end{tabular*}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Windsor}{\textbf{Jan. 2021 - April 2024}}
+      {Bachelor of Computer Science Honours}{}
+        \resumeItemListStart{}
+          \resumeItem{\textbf{Relevant coursework}: Algorithm Design, Software Engineering Principles, Operating Systems, Computer Networks, Web Development, Data Structures, Machine Learning.}
+          \resumeItem{\textbf{Minor \& Specialization}: Business Administration, Game Development}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C\#, C, C++, Python, Java, JavaScript, HTML/CSS} \\
+     \textbf{Developer Tools \& Frameworks}{: Unity, Git, VS Code, Android Studio, SQLite, MySQL, React.JS, Node.JS } \\
+     \textbf{}{Microsoft Azure Playfab, Photon Networking PUN2}
+    }}
+ \end{itemize}
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Basement Dweller Games }{Windsor, ON}
+      {Lead Game Programmer}{Dec 2023 - Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{Contributions}}
+        {Led the development of captivating game projects using Unity3D, ensuring the implementation of cutting-edge features for an enhanced player experience.}
+        \resumeItem{\textbf{Advanced Player Controller System}}
+        {Developed complex algorithms to ensure a smooth Player Controller, incorporating the latest trends in gaming for a seamless and immersive gameplay experience.}
+      \resumeItemListEnd
+        \resumeSubheading
+      {Fiverr}{Remote}
+      {Freelance Game Developer and Coach}{Oct 2022 - May 2023}
+      \resumeItemListStart
+        \resumeItem{\textbf{Unity Game Development Instructor}}
+        {Provided freelance services on Fiverr as a Game Developer and Coach, teaching both fundamental and advanced aspects of Unity Game Development.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Krenich Studios }{Remote}
+      {Founder}{May 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{Innovative Mobile Game Development}}
+        {Pioneered the development of three successful titles at Krenich Studios, introducing captivating experiences in the form of two mobile games, "Hyroute" and "Cube Stack," alongside the widely acclaimed online game "Backrooms with Friends," amassing thousands of downloads.}
+        \resumeItem{\textbf{Skill Set}}
+        {Demonstrated expertise in online networking, mobile game development, Unity, Path-finding algorithms, and many other cutting-edge technologies.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Backrooms With Friends (2023)}
+    \begin{flushleft}
+    Online horror multiplayer game with procedural animation, level generation, and 1500+ downloads for a chilling and immersive experience.
+    \end{flushleft}
+
+    \resumeSubItem{Hyroute (2021)}
+    \begin{flushleft}
+      {Endless Runner casual game on Google Play}
+      \end{flushleft}
+    \resumeSubItem{Tiny Kings (2022)}
+    \begin{flushleft}
+      {Online board game with ranking, user accounts, and friend/party invite system using Microsoft Playfab and Photon Networking.}
+       \end{flushleft}
+    \resumeSubItem{Cube Stack (2023)}
+      {A visually stunning casual endless game on Google Play, developed in three days.}
+
+
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+%
+
+
+%-------------------------------------------
+\end{document}
