@@ -19,7 +19,8 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
-
+\usepackage[OT1]{fontenc}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -54,8 +55,9 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\bfseries\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -72,7 +74,7 @@
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      {\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -92,12 +94,13 @@
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\small$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -107,109 +110,100 @@
 %----------HEADING-----------------
 \begin{center}
     \textbf{\Huge \scshape Raid Krenich} \\ \vspace{1pt}
-    \small +1-226-724-6260$|$ \href{mailto:krenichraid@gmail.com}{\underline{krenichraid@gmail.com}} $|$ 
-    \href{https://www.linkedin.com/in/krenich}{\underline{Linkedin}} $|$
-    \href{https://github.com/Krenich09}{\underline{Github}} $|$
-    \href{https://rq1d.itch.io/}{\underline{Itch.io}}
+    \small (226) 724-6260 $|$
+    \href{mailto:krenichr@uwindsor.ca}{{krenichr@uwindsor.ca}} $|$ 
+    \href{https://www.linkedin.com/in/krenich}{\underline{linkedin.com/in/krenich}} $|$
+    \href{https://github.com/krenich09}{\underline{github.com/krenich09}}
 \end{center}
-
-%
-%\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%  \textbf{\href{http://sourabhbajaj.com/}{\Large Raid Krenich}} & Email : \href{mailto:krenichraid@gmail.com}{krenichraid@gmail.com}\\
-%  \href{}{} & Mobile : +1-226-724-6260 \\
-%\end{tabular*}
-
-
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Windsor}{\textbf{Sep. 2023 - April 2027}}
-      {Bachelor of Computer Science Honours}{}
-        \resumeItemListStart{}
-          \resumeItem{\textbf{Relevant coursework}: Algorithm Design, Software Engineering Principles, Operating Systems, Computer Networks, Web Development, Data Structures, Machine Learning.}
-          \resumeItem{\textbf{Minor \& Specialization}: Business Administration, Game Development}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+      {Bachelor of Computer Science Honours Computer Science Co-op}{Sep 2023 - Apr 2027}
+      {University of Windsor}{GPA: 91\%}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant coursework}: Data Structures \& Algorithms, Software Engineering Principles, Object-Oriented Programming, Computer Networks, Web Development, Database Management.}
+      \resumeItemListEnd
 
-%
-%-----------PROGRAMMING SKILLS-----------
+  \resumeSubHeadingListEnd
+%----------- SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: JavaScript, Typescript, C\#, C, C++, Python, Java, HTML/CSS} \\
-     \textbf{Developer Tools \& Frameworks}{: Node.js, Express, Electron.js, React, NextJS, Postgres, Docker, Unity, Git, Android Studio, OpenAI, Google Gemini, React, Microsoft Azure, Photon Networking PUN2, Stripe}
+     \textbf{Programming Languages}{: JavaScript, Typescript, C\#, C, Python, Java, HTML/CSS} \\
+     \textbf{Database Management}{: PostgreSQL, MySQL, MS SQL Server} \\
+     \textbf{Developer Tools \& Frameworks}{: Node.js, Express, AngularJS, Electron.js, React, NextJS, Docker, Unity, Android Studio, OpenAI, Google Gemini, Google Cloud, AWS, Microsoft Azure, Stripe Devtools}
     }}
  \end{itemize}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Quick Resume}{2024}
+      {\href{https://quickresume.co/?ref=res}{quickresume.co}}{}
+      \resumeItemListStart
+        \resumeItem{Launched an \textbf{AI-powered} tool \textbf{SaaS} that generates multiple unique, professional, and ATS-optimized resumes in minutes, streamlining resume creation for casual and professional users.}
+        \resumeItem{Optimized the platform's \textbf{backend}, resulting in a \textbf{50\%} reduction in server response time, which led to a smoother\\user experience.}
+
+        \resumeItem{Featured on \textbf{Product Hunt}, helped more than \textbf{1000 users} craft standout resumes, gaining recognition for efficiency \\and user satisfaction.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Codeloom AI}{2024}
+      {\href{https://code-loom.com/?ref=res}{code-loom.com}}{}
+      \resumeItemListStart
+        \resumeItem{Built an AI-powered code-comment generator to automate and expedite documentation across programming languages.}
+        \resumeItem{Integrated \textbf{OpenAI}’s models to generate concise comments, improving readability and saving developers time.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Prayer-Time App}{2024}
+      {Microsoft Store}{}
+      \resumeItemListStart
+        \resumeItem{Designed a \textbf{cross-platform} desktop app using \textbf{Electron.js} to manage daily prayers with custom reminders, calculation methods, and a clean, modern \textbf{user interface}. }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+ 
+%
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Basement Dweller Games }{Windsor, ON}
-      {Lead Game Programmer}{Nov 2023 - Present}
+      {Lead Programmer}{Nov 2023 - Jan 2025}
+      {Basement Dweller Games}{Remote}
       \resumeItemListStart
-        \resumeItem{Led the development of captivating game projects using Unity3D, ensuring the implementation of cutting-edge features for an enhanced player experience.}
-        \resumeItem{Designed and developed complex algorithms to ensure a smooth Player Controller, incorporating the latest trends in gaming for a seamless and immersive gameplay experience.}
+        \resumeItem{Led the development of the commercial game \textbf{"Dead Charge"}, overseeing the integration of 10+ advanced \textbf{game-play} features to elevate overall player experience.}
+        \resumeItem{Engineered a modular, player controller system using \textbf{C\#}, enabling flexible functionality and scalability.}
       \resumeItemListEnd
       \resumeSubheading
-      {Krenich Studios }{Remote}
-      {Founder}{May 2022 - Present}
+      {Teaching Assistant}{Jan 2025 - Apr 2025}
+      {University of Windsor}{Windsor, Ontario}
       \resumeItemListStart
-        \resumeItem{\textbf{Innovative Mobile Game Development}}
-        {Pioneered the development of three successful titles at Krenich Studios, introducing captivating experiences in the form of two mobile games, "Hyroute" and "Cube Stack," alongside the widely acclaimed online game "Backrooms with Friends," amassing thousands of downloads.}
-        \resumeItem{\textbf{Full Stack Web Development:}}
-        {Demonstrated ability to build websites and SaaS from start to finish, creating an AI Resume Generation Service "Quick Resume", and a code-comment AI generator "Codeloom".}
+        \resumeItem{Guided "Intro to Internet" students in understanding \textbf{HTML}, \textbf{CSS}, and \textbf{JavaScript} concepts.}
+        \resumeItem{Demonstrated strong \textbf{communication} skills explaining concepts and addressing questions related to the course.}
       \resumeItemListEnd
       
         \resumeSubheading
+      {Unity Game Development Instructor}{Oct 2022 - Jun 2023}
       {Fiverr}{Remote}
-      {Freelance Game Developer and Coach}{Oct 2022 - May 2023}
       \resumeItemListStart
-        \resumeItem{\textbf{Unity Game Development Instructor}}
-        {Provided freelance services on Fiverr as a Game Developer and Coach, teaching both fundamental and advanced aspects of Unity Game Development.}
+          \resumeItem{Coached over 30 clients in both \textbf{C\#} fundamentals and advanced \textbf{Unity} game development concepts to a diverse \\range of clients, tailoring lessons to meet individual needs and learning styles.} 
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-
   
+  %-----------EXTRACURRICULAR ACTIVITIES-----------
+\section{Extra-Curricular Activities}
 
 
-%-----------PROJECTS-----------------
-\section{Projects}
   \resumeSubHeadingListStart
-  \resumeSubItem{ \href{https://quickresume.co/?ref=res}{\underline{\textbf{Quick Resume}}}{\textbf{ (2024)}}}
-    \begin{flushleft}
-      {Developed an AI-powered tool that generates multiple unique, professional, and ATS-readable resumes in minutes. Featured on Product Hunt, this tool has assisted numerous users in creating standout resumes.}
-       \end{flushleft}
-  \resumeSubItem{ \href{https://code-loom.com/?ref=res}{\underline{\textbf{Codeloom AI}}}{\textbf{ (2023)}}}
-    \begin{flushleft}
-      {Developed an AI code-comment generator that helps developers save time on creating documentation for any programming language.}
-       \end{flushleft}
-  \resumeSubItem{\textbf{PrayerTime (2024)}}
-    \begin{flushleft}
-    A cross-platform desktop app (Electron.js) for Muslims to manage daily prayers with customizable reminders and calculation methods.
-    \end{flushleft}
-    \resumeSubItem{\textbf{Backrooms With Friends (2023)}}
-    \begin{flushleft}
-    Online horror multiplayer game with procedural animation, level generation, and 2000+ downloads for a chilling and immersive experience.
-    \end{flushleft}
-
-    \resumeSubItem{\textbf{Hyroute (2021)}}
-    \begin{flushleft}
-      {Published an endless runner casual game on Google Play, offering a simple yet engaging gaming
-experience to a wide audience.}
-      \end{flushleft}
-    \resumeSubItem{\textbf{Cube Stack (2023)}}
-      {A visually stunning casual endless game on Google Play, developed in three days.}
-
-
-%     \resumeSubItem{Mac Setup}
-%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+      \resumeSubheading
+      {Computer Science Society (CSS)}{Apr 2024 - Present}
+      {University of Windsor}{}
+      \resumeItemListStart
+        \resumeItem{Improved Computer Science Society website using \textbf{React} and \textbf{NextJS}, enhancing user experience and functionality.}
+        \resumeItem{Collaborated with a team to create and implement an AI-powered Discord moderator to assist with server management and ensure a safe and organized online environment.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-%
-
-
-%-------------------------------------------
 \end{document}
